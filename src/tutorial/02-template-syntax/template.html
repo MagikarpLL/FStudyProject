@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+        <div id="template">
+            <a v-bind:[dynamicparam1]="hrefValue">{{ htmlCode }}</a>
+            <br/>
+            <a v-bind:[dynamicParam1]="hrefValue"><span v-html="htmlCode"></span></a>
+            <br/>
+            <a v-bind:[special_symbol]="hrefValue">{{ testValue }}</a>
+            <br/>
+            <a :[special_symbol]="hrefValue">{{ testValue }}</a>
+            <br/>
+            <button @click='greet'>greet</button>
+            <br/>
+            <button @click="say('hi')">hi</button>
+        </div>
+        
+        <script src="template.js"></script>
+    </body>
+</html>

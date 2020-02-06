@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="day.css">
+        <link rel="stylesheet" type="text/css" href="night.css">
+    </head>
+    <body>
+
+        <div id="class-style" v-bind:class="propertiesClass">
+            <button @click="changeDay">changeDay</button>
+            <br/>
+            <span>Ask a yes/no question:<input v-model="question"></span>
+            <br/>
+            <span>{{ answer }}</span>
+            <br/>
+            <span>reverse Question is {{ reverseQuestion }} </span>
+            <br/>
+            <span>Plesase input the reverse Question: <input v-model="reverseQuestion"></span>
+        </div>
+
+        <div id="class-style2" v-bind:class="[(!isDay)?'day':'night']">
+            <span>Ask a yes/no question:test</span>
+            <br/>
+            <span>answer</span>
+            <br/>
+            <span>reverse Question is reverseQuestion </span>
+            <br/>
+            <span>Plesase input the reverse Question</span>
+        </div>
+        
+        <script src="class-style.js"></script>
+    </body>
+</html>
